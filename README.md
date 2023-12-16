@@ -27,7 +27,12 @@ This tutorial outlines the implementation of on-premises Active Directory within
 </p>
 <p>
 1.) We're going to start off our lab by creating 2 different virtual machines- one of which will be our domain controller (DC-1) and the other will be the client machine (Client-1). Start off by heading to the azure portal and selecting "create a resource" and select virtual machine. Click "create new" under the resource group dropdown box, and name this group "AD-Lab". Name your virtual machine "DC-1", and select Windows Server 2022 as the image type. In the Size tab, make sure to select a size that has at least 2 vcpus. Any Region should be fine as long as both DC-1 and Client-1 share the same. Make sure to keep note of the username and password as well. Scroll down and check off the box that says "use an existing windows server license?" and then confirm. Now click Review + Create and your first virtual machine will be created after a short period.
-2.) Create another resource, this time 
+
+
+
+
+
+2.) Create another resource and this time name the virtual machine "Client-1"; put it in the AD-Lab resource group. Use Windows 10 Pro as the image type and use 2 vcpus as the size. 
 
 
 
