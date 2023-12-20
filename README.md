@@ -40,9 +40,23 @@ This tutorial outlines the implementation of on-premises Active Directory within
 3.) Wait about 10 minutes for DC-1 and its virtual network to be created and then create another resource. This time name the virtual machine "Client-1" and put it in the AD-Lab resource group. Use Windows 10 Pro as the image type and use 2 vcpus as the size. Keep note of your Username and Password here as well, and then click to confirm you have an existing Windows 10 license. After clicking Review + Create and just before clicking Create, go to the Networking Tab and make sure your new VM is in the same vnet/subnet as DC-1. You should have a vnet that says DC-1/vnet or something similar.
 
 
+<img width="818" alt="Step 4 1" src="https://github.com/CGLuissi/configure-ad/assets/143234913/95e840a4-b447-48af-9a1e-774347933242">
+
+
 
 
 4.) On the virtual machines status page, click DC-1 and go to the Networking tab on the lefthand side under Settings. From here, click on the Network Interface and then on IP Configurations. Now click on ipconfig1 and change the IP setting to Static instead of Dynamic. 
+
+
+<img width="761" alt="Step5" src="https://github.com/CGLuissi/configure-ad/assets/143234913/c5b2df58-e3c8-433d-9e9d-73bcd564a248">
+
+
+<img width="340" alt="Step5 1" src="https://github.com/CGLuissi/configure-ad/assets/143234913/11e1eace-ad0e-446f-a365-666f87eab087">
+
+
+
+
+5.) Find the public IP address for Client-1 on the information tab. On the remote desktop program, enter the public IP and select "more choices" on the next prompt; log in with the username and password for Client-1.  
 
 
   
