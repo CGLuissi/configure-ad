@@ -56,7 +56,21 @@ This tutorial outlines the implementation of on-premises Active Directory within
 
 
 
-5.) Find the public IP address for Client-1 on the information tab. On the remote desktop program, enter the public IP and select "more choices" on the next prompt; log in with the username and password for Client-1.  
+5.) Find the public IP address for Client-1 on the information tab. On the remote desktop program, enter the public IP and select "more choices" on the next prompt; select "choose a different account" and log in with the username and password for Client-1. Once logged in, select "yes" on the prompt that asks if you want to allow your pc to become discoverable on the network.
+
+
+<img width="832" alt="Step6" src="https://github.com/CGLuissi/configure-ad/assets/143234913/166805e2-52ae-4115-bf66-72bfdd5638a6">
+
+
+
+6.) Head back to the information page for DC-1 and note the private IP address; we are going to test the connection between our 2 VMs by sending a message to our domain controller. Back in Client-1, open up the command prompt application and type this command: ping -t (DC-1's Private IP). The command ping is used to verify that we can reach our target computer, and the -t suffix allows for an automatic, perpetual ping that is stopped when we manually end it. If successful, we should recieve a response message indicating that there is a working connection between our two systems. 
+
+
+<img width="274" alt="Step6 1" src="https://github.com/CGLuissi/configure-ad/assets/143234913/9c8e0e5e-a028-4a76-bbc2-0b4037ac90a2">
+
+
+
+7.) We can see that there is a response "Request timed out" meaning that we aren't able to reach DC-1. Now, we must get the Public IP address for DC-1 and open another instance of remote desktop to see if we can resolve this issue. 
 
 
   
