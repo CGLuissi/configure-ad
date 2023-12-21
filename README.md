@@ -70,12 +70,39 @@ This tutorial outlines the implementation of on-premises Active Directory within
 
 
 
-7.) We can see that there is a response "Request timed out" meaning that we aren't able to reach DC-1. Now, we must get the Public IP address for DC-1 and open another instance of remote desktop to see if we can resolve this issue. 
+<img width="558" alt="Step 7 2" src="https://github.com/CGLuissi/configure-ad/assets/143234913/351cb8cf-6d69-4ca1-96f9-6ae2a0e3c268">
 
 
-  
+7.) We can see that there is a response "Request timed out" meaning that we aren't able to reach DC-1. Now, we must get the Public IP address for DC-1 and open another instance of remote desktop to see if we can resolve this issue. Within DC-1's task bar search , type "wf.msc" to open Windows Firewall. Select "inbound rules" and enlarge the VM window. Look for these 2 rules: "Core Networking Diagnostics ICMP Echo Request" (IPv4) and right click them, then click enable rule. The Internet Control Message Protocol(ICMP) is used to diagnose network communication issues and analyze health; however, Windows Firewall settings block pings by default. By enabling the 2 settings, we can recieve a response to our ping on Client-1 and you can cancel the perpetual ping by entering the key combo "CTRL+C" and pressing Enter.              
+
+
+
+<img width="589" alt="Step 8" src="https://github.com/CGLuissi/configure-ad/assets/143234913/5c8d4218-7489-453a-a046-3903b77c8292">
+
+
+<img width="571" alt="Step 8 1" src="https://github.com/CGLuissi/configure-ad/assets/143234913/86631eb0-9324-423a-8bdb-a8f6304f5db0">
+
+
+
+ 
+8.) We will now install Active Directory through the server manager in DC-1. Click "add roles and features" then select "Add Active Directory Domain Services" then "add features" and click "next" until you get to the screen showing all the active directory services being installed. Install and wait for it to complete, then go back to the server manager page. Click the flag with the exclamation point, then promote the server to a domain controller. Active Directory is now up and running, and we can begin to configure user and object settings. We can begin by creating an organizational forest for all our users. Select "Add a new forest" and then type in a domain name (this can be anything you'd like). 
+ 
+ 
 </p>
 <br />
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 <p>
 <img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
