@@ -114,6 +114,9 @@ This tutorial outlines the implementation of on-premises Active Directory within
 
 
 
+12.) In Client-1, right click Start, and go to System ->  Settings -> About -> Rename this PC (advanced). Click Change and then select Domain; enter mydomain.com and obersve that the connection can't be made. This is because the DNS settings for 
+
+
 
 
 
