@@ -91,6 +91,19 @@ This tutorial outlines the implementation of on-premises Active Directory within
 </p>
 <br />
 
+<img width="292" alt="Step 9" src="https://github.com/CGLuissi/configure-ad/assets/143234913/d99ef86d-938f-4b42-86c1-d4421eb11d2b">
+
+
+
+
+9.) Attempt to log back on to the DC-1 VM and observe what happens; you may have trouble signing in because the VM has officially become a domain controller and is now looking for a slightly different username in order to log in. The server is now looking for a username within the context of a domain name, meaning that you now have to clarify that you're signing specifically into the created domain with your username. For example, if your Username was "labuser" and your selected domain name was "mydomain.com", then your new login info must be "mydomain.com\labuser". Open up Remote Desktop then select "show options" and select your IP, then enter mydomain.com\labuser.
+
+
+<img width="415" alt="Step 10" src="https://github.com/CGLuissi/configure-ad/assets/143234913/79ca7405-6de8-4088-9473-5879180d6ac1">
+
+
+
+10.) Now that you are signed back into DC-1, click on the start menu and search for Active Directory Users and Computers. On the left-hand side, select your domain name then right click ->New -> Organaizational Unit. Name the unit "_EMPLOYEES", and make another unit named "_ADMINS". Now click then right click "_ADMINS" and create a new User. Name the user Jane Doe with the logon name "jane_admin" and set a password that you will remember. Make sure to uncheck the box that says "User must change password at next logon" at the next screen. 
 
 
 
