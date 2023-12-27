@@ -103,7 +103,14 @@ This tutorial outlines the implementation of on-premises Active Directory within
 
 
 
-10.) Now that you are signed back into DC-1, click on the start menu and search for Active Directory Users and Computers. On the left-hand side, select your domain name then right click ->New -> Organaizational Unit. Name the unit "_EMPLOYEES", and make another unit named "_ADMINS". Now click then right click "_ADMINS" and create a new User. Name the user Jane Doe with the logon name "jane_admin" and set a password that you will remember. Make sure to uncheck the box that says "User must change password at next logon" at the next screen. 
+10.) Now that you are signed back into DC-1, click on the start menu and search for Active Directory Users and Computers. On the left-hand side, select your domain name then right click ->New -> Organaizational Unit. Name the unit "_EMPLOYEES", and make another unit named "_ADMINS". Now click then right click "_ADMINS" and create a new User. Name the user Jane Doe with the logon name "jane_admin" and set a password that you will remember. Make sure to uncheck the box that says "User must change password at next logon" at the next screen. Next, give Jane Doe access to the domain admin security group by right clicking the name, and selecting Properties -> "Member Of" -> type in Domain Admins. Click "Check Names" then click ok -> apply -> ok.
+
+
+<img width="281" alt="Step 11" src="https://github.com/CGLuissi/configure-ad/assets/143234913/b89c771c-2197-4bdc-bc34-95042fd833d5">
+
+
+
+11.) As an experiment, open up command prompt and type in and enter "hostname"; now type the command "whoami". These two commands show you the host name of your current system and clarify which user is currently in access, respectively. Enter in the command "logoff" and restart the VM, but this time select show options and sign in as "mydomain.com\jane_admin" with your chosen password. 
 
 
 
