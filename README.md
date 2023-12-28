@@ -113,8 +113,11 @@ This tutorial outlines the implementation of on-premises Active Directory within
 11.) As an experiment, open up command prompt and type in and enter "hostname"; now type the command "whoami". These two commands show you the host name of your current system and clarify which user is currently in access, respectively. Enter in the command "logoff" and restart the VM, but this time select show options and sign in as "mydomain.com\jane_admin" with your chosen password. 
 
 
+<img width="424" alt="STEP13 Rv" src="https://github.com/CGLuissi/configure-ad/assets/143234913/38144791-d90d-4091-961a-b0dfb6ace963">
 
-12.) In Client-1, right click Start, and go to System ->  Settings -> About -> Rename this PC (advanced). Click Change and then select Domain; enter mydomain.com and obersve that the connection can't be made. This is because the DNS settings for 
+
+
+12.) In Client-1, right click Start, and go to System ->  Settings -> About -> Rename this PC (advanced). Click Change and then select Domain; enter mydomain.com and observe that the connection can't be made. This is because the DNS settings for Client-1 are on a public IP, and not connected directly to DC-1. You can check this yourself by opening up command prompt and typing this command: "ipconfig/all". In order to actually join the DNS server as Client-1, we are going to set Client-1's DNS address as the private IP for DC-1. In the azure portal get the private IP for DC-1, then go to Client-1's Networking tab and select its network interface. Now select the DNS servers tab and select custom. Enter the private IP for DC-1 and click Save. Client-1 will need to be restarted for the setting to save, so go back to the Resources tab, select Client-1 and click the restart option. 
 
 
 
