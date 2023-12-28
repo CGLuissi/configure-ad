@@ -135,34 +135,24 @@ This tutorial outlines the implementation of on-premises Active Directory within
 <img width="494" alt="Final step" src="https://github.com/CGLuissi/configure-ad/assets/143234913/807af90e-968b-4d0d-a9d8-0e2e9eb7a0c4">
 
 
-
-14.) Switch back over to DC-1 and make sure you are signed in as jane_admin; if not, enter the logoff command in command prompt and sign back in. Open up the Powershell ISE application and run as an administrator. First, open this [link](https://github.com/joshmadakor1/AD_PS/blob/master/Generate-Names-Create-Users.ps1) and copy the raw contents. Now click on File in the top left corner, and create a new file. Paste the script into the new file, and notice the 3rd line in the script; this    
-
+<img width="580" alt="Finalstep2" src="https://github.com/CGLuissi/configure-ad/assets/143234913/038cf16e-daff-4672-9beb-25e16cef11de">
 
 
 
+14.) Switch back over to DC-1 and make sure you are signed in as jane_admin; if not, enter the logoff command in command prompt and sign back in. Open up the Powershell ISE application and run as an administrator. First, open this [link](https://github.com/joshmadakor1/AD_PS/blob/master/Generate-Names-Create-Users.ps1) and copy the raw contents. Now click on File in the top left corner, and create a new file. Paste the script into the new file, and notice the 3rd line in the script; this script will generate 1000 users but you can alter the variable (1000) to any number you'd like. For the sake of simplicity, you can change this number to 10. With this script, we should have 10 (or more, your choice) new users that we can use to sign into our domain. Test this by opening up active directory users and computers and going to the "_EMPLOYEES" folder and looking at the new domain users. Right click one of the names, and open up Properties; take note of the display name and try to sign back in as that user (note: by default the user's password will be Password1). 
+
+We have successfully deployed active directory, created a domain controller, linked a client to the domain, and created a functioning list of new users. If you'd like to experiment more with this environment, you can continue on to the DNS and File Sharing Labs. If you'd like to take a break or end here, head back to the Azure portal and delete the AD-Lab resource group. 
 
 
-
-
-
-
+<img width="308" alt="EXTRASTEP" src="https://github.com/CGLuissi/configure-ad/assets/143234913/4052f4b9-9124-4a78-bef4-643b8e1c20eb">
 
 
 
 
-<p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-</p>
-<p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-</p>
-<br />
+EXTRA STEP) You can unlock a locked account (for example, if a user has tried unsuccessfully to log in multiple times), and you can also
 
-<p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-</p>
-<p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-</p>
-<br />
+
+<img width="276" alt="EXTRASTEP2" src="https://github.com/CGLuissi/configure-ad/assets/143234913/8d9ddcd1-8e4d-470d-8ea2-b96223eeccc2">
+
+
+reset a password.
