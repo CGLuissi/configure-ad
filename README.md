@@ -128,7 +128,15 @@ This tutorial outlines the implementation of on-premises Active Directory within
 13.) Reconnect to Client-1 as labuser, and enter the "ipconfig/all" command in command prompt. Our DNS server is now almost connected, but we can finalize this by right clicking the start menu -> system -> rename this pc (advanced) -> change -> domain. When prompted for a username and password, sign as "mydomain.com/jane_admin" using your chosen passsword. When this goes through, you will be prompted to restart your computer, so reload the VM and sign as mydomain.com\jane_admin. Once back in, right click the start menu and follow these steps: settings -> search "remote desktop" -> select users that remotely access this PC -> add "domain users". By doing this, we should be able to log back into our domain as any user, and we will test this in the next step.
 
 
-14.) Switch back over to DC-1 and make sure you are signed in as jane_admin; if not, enter the logoff command in command prompt and sign back in. Open up the Powershell ISE application and run as an administrator. Copy this {script}(https://github.com/joshmadakor1/AD_PS/blob/master/Generate-Names-Create-Users.ps1)
+
+<img width="586" alt="STEP14" src="https://github.com/CGLuissi/configure-ad/assets/143234913/00c608af-6264-4d62-99ab-a1542ffe6bf1">
+
+
+<img width="494" alt="Final step" src="https://github.com/CGLuissi/configure-ad/assets/143234913/807af90e-968b-4d0d-a9d8-0e2e9eb7a0c4">
+
+
+
+14.) Switch back over to DC-1 and make sure you are signed in as jane_admin; if not, enter the logoff command in command prompt and sign back in. Open up the Powershell ISE application and run as an administrator. First, open this [link](https://github.com/joshmadakor1/AD_PS/blob/master/Generate-Names-Create-Users.ps1) and copy the raw contents. Now click on File in the top left corner, and create a new file. Paste the script into the new file, and notice the 3rd line in the script; this    
 
 
 
